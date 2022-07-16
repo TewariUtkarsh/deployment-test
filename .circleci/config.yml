@@ -68,7 +68,7 @@ jobs:
       - heroku/install
       
       - setup_remote_docker:
-          version:
+          version: 18.06.0-ce
       
       - run:
           name: Pushing to heroku registry
