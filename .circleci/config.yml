@@ -33,17 +33,16 @@ jobs:
             - "venv"
       
       # The following step is to execute our custom test and store the result in the form of artifact
-      """
-      - run:
-          command: |
-            . venv/bin/activate
-            python -m pytest -v tests/test_script.py
-      - store_artifacts:
-          path: test-reports/
-          destination: tr1
-      - store_test_results:
-          path: test-reports/
-      """
+      # - run:
+      #    command: |
+      #      . venv/bin/activate
+      #      python -m pytest -v tests/test_script.py
+      #- store_artifacts:
+      #    path: test-reports/
+      #    destination: tr1
+      #- store_test_results:
+      #    path: test-reports/
+
 
       - setup_remote_docker:
           version: 19.03.13
